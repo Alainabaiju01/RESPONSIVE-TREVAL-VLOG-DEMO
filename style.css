@@ -98,7 +98,7 @@
   }
 
   .listitem {
-    display: inline;
+    display: flex;
     margin: 10px 0; /* space between links */
   }
 
@@ -108,14 +108,22 @@
     margin-top: 10px;    /* push slightly below logo/nav */
     text-align: center;
   }
+  .hero1{
+  font-family:inherit;
+  background-image: url(./images/Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;   /* full viewport height */
+  position: relative;  /* so .head1 (absolute) is positioned inside */
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Banner image responsive */
-  #banner img {
 
-    width: 100%; 
-    /* take most of screen width */
-   
-  }
+ 
+ 
 }
 
 @media (max-width: 500px) {
@@ -128,6 +136,8 @@
   #logo img {
     width: 120px;  /* shrink logo */
   }
+  
+
 }
 
 
@@ -198,19 +208,23 @@ cursor: pointer;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .hero2-grid {
     text-align: center;
     
   }
   .image-grid {
-  display: grid;
-  margin-bottom:80px ;
+ display: block;
+ 
   }
 
-  .hero2-text {
-    margin-top: 20px;
+}
+@media (max-width: 630px){
+  .image-grid {
+
+ 
   }
+
 }
 
 .hero3{
