@@ -11,25 +11,38 @@
     
     <section class="hero1">
 
-      <!-- NAVBAR -->
-       <nav class="navbar">
+     <nav class="navbar">
 
-        <!-- LOGO -->
-          <div id="logo">
-           <img width="250px" src="./images/logo.png">
-          </div>
+  <!-- LOGO -->
+  <div id="logo">
+    <img width="250px" src="./images/logo.png">
+  </div>
 
-       <!-- navicons -->
-          <div class="navitem">
-           
-             <ul>
-              <li class="listitem"><a class="links" href="#hero1">HOME</a></li>
-              <li class="listitem"><a class="links" href="#hero2">REVIEWS</a></li>
-              <li class="listitem"><a class="links" href="#hero3">PACKAGES</a></li>
-              <li class="listitem"><a class="links" href="#hero4">CONTACT</a></li>
-             </ul>
-          </div>
-      </nav>
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    &#9776;
+  </div>
+
+  <!-- Desktop nav items -->
+  <div class="navitem" id="nav-links">
+    <ul>
+      <li class="listitem"><a class="links" href="#hero1">HOME</a></li>
+      <li class="listitem"><a class="links" href="#hero2">REVIEWS</a></li>
+      <li class="listitem"><a class="links" href="#hero3">PACKAGES</a></li>
+      <li class="listitem"><a class="links" href="#hero4">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#hero1">HOME</a></li>
+      <li><a href="#hero2">REVIEWS</a></li>
+      <li><a href="#hero3">PACKAGES</a></li>
+      <li><a href="#hero4">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
 
      
       
@@ -133,4 +146,21 @@
      </div>
     
 </body>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Optional: Close menu when clicking a link
+  const menuLinks = mobileMenu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
+    });
+  });
+</script>
+
 </html>
